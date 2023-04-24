@@ -16,7 +16,7 @@ class MarkovChain {
 
  public:
   MarkovChain() = delete;
-  MarkovChain(const std::string &base_str, std::size_t _words_in_prefix = 2);
+  explicit MarkovChain(const std::string &base_str, std::size_t _words_in_prefix = 2);
   std::string GenerateText(const std::size_t result_size = 1000);
   ~MarkovChain() {}
 };

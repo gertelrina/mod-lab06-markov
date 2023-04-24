@@ -1,11 +1,9 @@
 // Copyright 2023 UNN-IASR
 #include "textgen.h"
-#include "chrono"
 #include "iostream"
 #include "random"
 #include "sstream"
 #include "string"
-#include "random"
 
 MarkovChain::MarkovChain(const std::string &base_str,
                          std::size_t _words_in_prefix)
