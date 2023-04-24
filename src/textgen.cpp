@@ -5,6 +5,7 @@
 #include "random"
 #include "sstream"
 #include "string"
+#include "random"
 
 MarkovChain::MarkovChain(const std::string &base_str,
                          std::size_t _words_in_prefix)
@@ -37,8 +38,8 @@ std::string MarkovChain::GenerateText(const std::size_t result_size) {
     if (i != words_in_prefix - 1)
       result += " ";
   }
-  std::mt19937 gen(
-      std::chrono::high_resolution_clock::now().time_since_epoch().count());
+  std::random_device rand_item;
+  std::mt19937 gen(rand_item());
   std::size_t size_in_words = words_in_prefix;
   while (size_in_words < result_size) {
     const auto iter = statetab.find(currPref);

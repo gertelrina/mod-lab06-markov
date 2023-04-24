@@ -1,6 +1,6 @@
 // Copyright 2021 GHA Test Team
 #include "textgen.h"
-#include <gtest/gtest.h>
+#include "gtest/gtest.h"
 #include "string"
 
 TEST(markovTest, checkOneSuffix) {
