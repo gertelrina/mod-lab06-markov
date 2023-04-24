@@ -7,14 +7,14 @@
 #include "vector"
 
 class MarkovChain {
-private:
+ private:
   typedef std::deque<std::string> prefix;
   std::map<prefix, std::vector<std::string>> statetab;
   std::size_t words_in_prefix;
 
   std::string ConvertFromDeque(const prefix &prx);
 
-public:
+ public:
   MarkovChain() = delete;
   explicit MarkovChain(const std::string &base_str,
                        std::size_t _words_in_prefix = 2);
